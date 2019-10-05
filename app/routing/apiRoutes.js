@@ -38,7 +38,7 @@ module.exports = function(app) {
     //TODO create JSON object with name, photo, and compatibility percentage of closest match. Send results back to requester.
     let match = {
       name: friends[closestMatchFriend].name,
-      photo: friends[closestMatchFriend].photo,   //path.join(path.relative("../../public","../../profilePics"),friends[closestMatchFriend].photo),
+      photo: `/img/${friends[closestMatchFriend].photo}`,   //path.join(path.relative("../../public","../../profilePics"),friends[closestMatchFriend].photo),
       compatVal: `Compatibility Value: ${100 - (closestMatchVal / 40) * 100}%`
     }
     console.log(match);
