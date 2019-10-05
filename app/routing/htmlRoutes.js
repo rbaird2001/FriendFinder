@@ -1,14 +1,15 @@
-const express = require("express");
-const app = express();
-
-
+const path = require("path");
 //req will hold an object with all the detail about the request
 //res will hold an object with all the detail about the resonse
-//default route
-app.get("/",function(req,res){
+module.exports = function (app) {
+    //default route
+    app.get("/", function (req, res) {
+        res.sendFile(path.join(__dirname, "../public/home.html"));
+    });
 
-});
-//survey route
+    //survey route
+    app.get("/survey", function (req, res) {
+        res.sendFile(path.join(__dirname, "../public/survey.html"));
+    });
+}
 
-//setup the listener
-app.listen(3000,function(){});
