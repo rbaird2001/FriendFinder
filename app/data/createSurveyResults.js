@@ -8,6 +8,7 @@ for (i = 0; i < friendNames.length; i++) {
     friends.push({
         name: friendNames[i],
         photo: `${i}.jpg`,
+        gender: 'f',
         scores: [Math.floor(Math.random() * 5 + 1), Math.floor(Math.random() * 5 + 1), Math.floor(Math.random() * 5 + 1), Math.floor(Math.random() * 5 + 1), Math.floor(Math.random() * 5 + 1), Math.floor(Math.random() * 5 + 1), Math.floor(Math.random() * 5 + 1), Math.floor(Math.random() * 5 + 1), Math.floor(Math.random() * 5 + 1), Math.floor(Math.random() * 5 + 1)]
     })
 }
